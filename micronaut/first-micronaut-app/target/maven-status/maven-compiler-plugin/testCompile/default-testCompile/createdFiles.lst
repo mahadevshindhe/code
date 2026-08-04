@@ -1,0 +1,8 @@
+example\micronaut\$DefaultTest$Definition$Exec.class
+example\micronaut\$HelloControllerTest$Definition.class
+example\micronaut\$DefaultTest$Definition.class
+META-INF\micronaut\io.micronaut.inject.BeanDefinitionReference\example.micronaut.$HelloControllerTest$Definition
+example\micronaut\HelloControllerTest.class
+META-INF\micronaut\io.micronaut.inject.BeanDefinitionReference\example.micronaut.$DefaultTest$Definition
+example\micronaut\DefaultTest.class
+example\micronaut\$HelloControllerTest$Definition$Exec.class

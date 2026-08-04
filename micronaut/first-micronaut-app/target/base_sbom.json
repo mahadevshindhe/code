@@ -1,0 +1,3203 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:f636d2db-3de6-3f50-966e-05d5bd850549",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-04T03:34:24Z",
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "author": "OWASP Foundation",
+          "group": "org.cyclonedx",
+          "name": "cyclonedx-maven-plugin",
+          "version": "2.9.1",
+          "description": "CycloneDX Maven plugin",
+          "hashes": [
+            {
+              "alg": "MD5",
+              "content": "9c7a565cf28cce58557d0c621c5ea4b1"
+            },
+            {
+              "alg": "SHA-1",
+              "content": "be882d5a22050bfa9d19090b1420c188617d0e1c"
+            },
+            {
+              "alg": "SHA-256",
+              "content": "698e0f37184a5b28c245c4065fd036dfce253b52f82fbb7113d81d36326cc249"
+            },
+            {
+              "alg": "SHA-512",
+              "content": "c0f0b11026858166f872a2eb54719492e5cecaa0bc9cd6b30b3ecb4a174eed220f4a1b5829d18d6734128e778d3cb3db7ffed177c92866133129cb29081814a0"
+            },
+            {
+              "alg": "SHA-384",
+              "content": "d80964707dfe5caca8c70521d5066f57589304c0a657e6fbc7c0614ea0fc7b3b3dbe7778361eee0f54ba111e9cb0ffcb"
+            },
+            {
+              "alg": "SHA3-384",
+              "content": "80bc3a275d9514bc457461ff52a72add8c7ecbbc01d8912efce57139016c544ee776981851be0a58fa977ab4221f703f"
+            },
+            {
+              "alg": "SHA3-256",
+              "content": "142317d6f245390f4fd2d0c100b16281b8dfc5c0c2cff86943bdcc97039cb699"
+            },
+            {
+              "alg": "SHA3-512",
+              "content": "af0fb9137c90b65d1a07f72e4d51ae509956cdb8800f35c961b037cdda1fe4a14ce3b496cef71ba85f1621affcfe29cd42704ae4191ff0b090a9602087c8997b"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "bom-ref": "pkg:maven/example.micronaut/default@0.1?type=native-image",
+      "group": "example.micronaut",
+      "name": "default",
+      "version": "0.1",
+      "description": "Natively Cloud Native",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/example.micronaut/default@0.1?type=native-image",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io/default"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git/default"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/mshindhe/code/code/micronaut/first-micronaut-app/target/default-0.1.jar",
+      "prunable": true
+    },
+    "properties": [
+      {
+        "name": "maven.goal",
+        "value": "makeAggregateBom"
+      },
+      {
+        "name": "maven.scopes",
+        "value": "compile,provided,runtime,system"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-http-server-netty@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-http-server-netty",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2e9e212b3bb71f1d58ef0b3e8509d29b"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "32e75c8b9c141f49d88eddba628752020b662e70"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "65880de31e3ebd4a31ee369b02b368f5fff68f297cf8f9f73f07f1b2373ff84d"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "ca1ad4536a0855b1e2a42ce5ff19962fff12c32827cf8a3266216c0253f8940c8cfe183f45dabccca14ee6de1303faa6bf570b900fc35a04b94cdeb84ce48280"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "238eea1c64d7ca99d0015546844f79005d5b025f83356d9140198d4c060ccdfb71483f00d20837cd649d34b5a890e94e"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "bd5f5e980cd21189f47fa0d77b071e8ffdf243785b1957f98445cedd43569fc13a3d97d730b035c0f62681475af5a5f1"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "773115d17cc02099fc1e767a400fdee055632b0b0a16e82c4c305877fafbc4b5"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "390344e26a449c28cff4a2f72508f5317f6ad8f7b0cafe147cc5fc5f2d1574bcca373775d87361b329b51608da58e6585c286d919ad832ff5798e8aa22b5215f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-http-server-netty@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-http-server-netty/5.0.2/micronaut-http-server-netty-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+      "publisher": "QOS.ch",
+      "group": "org.slf4j",
+      "name": "slf4j-api",
+      "version": "2.0.17",
+      "description": "The slf4j API",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "b6480d114a23683498ac3f746f959d2f"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "d9e58ac9c7779ba3bf8142aff6c830617a7fe60f"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "9a3e79db6666a6096a3021bb2e1d918f30f589d8de51d6b600f8ebd92515a510ae2d8f87919cc2dfa8365d64f10194cac8dfa0fb950160eef0e9da06f6caaeb9"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "6ea24f814a9b6ece428cfd0535e2f3b8927005745ef61006b50fdb5a90126ee5ea05650155382b3b755c5bce38ef3944"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "9b1015052f0ec43f9be09764e131834157599611cb52f6fe591c4ac6a8ab4817518f2a4b8871e5e738c8678e93af5557"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "00559b4f4066b4917ba4fe2a6f23111eaeada321112d030910d218ced9084b5e"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "9579c2f7e7516e177c2d493ccc9eb8150978cf19f6f09b28d116f6935239fd56dc6af2b62b3336f79b0b462445550cd1fb5377a07001a6f44aaab6a32fa2fa47"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.slf4j.org"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/qos-ch/slf4j/slf4j-parent/slf4j-api"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-http-server@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-http-server",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "08c87997adb7f1150d498b98a15480bf"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "7781eedad0652c9e8a8d52472f658950198d1153"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "a4c5b20be322ed17c124c71dc968b3636eafd30cc94049ce27c42729db7c1810"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "0b8271fdf14da32b717648b2d7e3d4f43f101c1f78b47bf7217d761f9169917ad65a06f59821d47d03ace4277f10a25ddf5abb5818007dc4fa57415dc1ccb999"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "8fdc5803334385077b130bbd5433800bdb5c9302269588ba234286804647705781879a4b1d4326633ca5a9896dd2e0e9"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "9c74e34c23e3f6b236320f65a7dca73583e5a1b652ba831e2f014c40c72c71c7942b438601e90def9fa24dd2b6958f78"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "29dd72e87458f5072917445c676dcf9a312b2e8c821ad0b7449b29e6c988eb10"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "a7149b894a3dad39588b73bc1404831f9788ea140f099ca4badfa73a551b3d646877428af9b5ea110be4d6724bf3212f06778a05f9940862b6e1d247c45f67f2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-http-server@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-http-server/5.0.2/micronaut-http-server-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-http",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "6d6d9ec070a9857583d04f32d2dc890a"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "668204c2b0f18008c8a02ba463c7c5e5b42b4ef5"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "41767bad7c14eaa544f8f9efeefa3ad86c5dbf01d945ff6cda01566a7659c0b9"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "9e7f7c3b7422453f5cd2d83263f15a70bff1d0441bc03026bf81ecef74268b0b5e86ace9714c25d09f1867d1906b6799ed314f4326d62fe1cbe1b4e4e5b478b4"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "8e9f75611e07ec07bc0c64c42346182ef7b5bfb5563ad3c6e17ade7b915b8132ef12bee0ac764fa792022bccf87f212e"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "e40b10ecd1eeb81ab135acece498b072ece4eb30e450185e9f54fb6090aecec54ff083756e33acf337f0829249a007c8"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "9756934a76387c3ef2fa55758498961710b994c4c7998d4d04f3fd41b23ac374"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "202f1ecfe287f165a8318af5a631eb83b0474d77bc150263dd8564de6eab30de06f53d6ac40256e7f4dba5a6082b373416d5beffd10ceb5cba7f9583dd09209c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-http/5.0.2/micronaut-http-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-core-reactive@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-core-reactive",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "38a9b69b96c41356f1a86fed6aba1a98"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "948aa7fccdb432270ae427688599b9532dba9d5a"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "d5b6f4a579122f2f866ae6fe8f39f2df822e2a0f15479c1dac7c8543231ab1bb"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "080d0a617d308479f88756f3ccc0bb789d125d9313866dd52eb8b7e02aa4304d98d7a80a8bd34f32b647011dba386e0a9c304c5a289f0775b3fa46e3bbd8d7f4"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b1e36da331edb6d49b9e41896dc9e7c82e00a17c8c5628c4b86a623c361b2a96f061e06aa43cdd5864b73a79ee7abc93"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "bbe01383df96cd3dde37759ae845313db186b028f7795f8839c87b050d19a5de24788dd00fd963f766be02d81f6706cc"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "cdaee8ffb623cc953639d0b1d0349fac69a2a83ae189f2935930ae31c4ddbbdf"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "dae89ed1dc6f2f6f3ef2266b5e4d21d21b122131fe1a780bf4834b764d8b2852462ee3eb862dfe5b66d31913042d45776ecda7aad920d09d515370cfabd3e189"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-core-reactive@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-core-reactive/5.0.2/micronaut-core-reactive-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-context-propagation@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-context-propagation",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d422d67717e0cf5adcafdd6398a77b70"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "461f13bfba6db7269ef66e10051cd2087f155f51"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "fdb94a6b2b088ffb31ea992401f007aee367a7216c45e374ca63bf73be399b03"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "183b0b38591676eb601141120578fc840d5ffbbd5dde457bf4cbc98a5c9ddd33f1541bded3d425bb4980cca226a283951d1f405f72ce9b11838a1df57b013158"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "5f4f1df25eaf86c5f08f1fe6692e35e5bc3dd33ebe89561f79306e37b84b184b547d642478a9497658117488265c0f9b"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "134e1d876c7c91e4d27a0559cd52e73e1c71e4601eebd29ea86838169cf12caba7410c5852de920784b228ed75394319"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "00b1c727e9184ffc2f0ecdefa02a1b0bd7b5cbbd5a4de3e9585129e3c97abc10"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "ffea217aca02f567e5864d6674c17dfbc06a0e3ccff43f14bd24db3ee18766400d329f2f5a8842a89e0903761bfb3f246d623b4b9aab910b6a45cec49f251198"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-context-propagation@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-context-propagation/5.0.2/micronaut-context-propagation-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-router@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-router",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "19ce76df9601d161cca3b65cac778048"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "67eed1ad5b97131c0147026d8c59e3bfea1e2848"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "6336b66bd474f97ac31c04f3b3262e144d4bc24c1a10a29b9760e62f4bd9afb0"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "df5674a7247c4286f62395d5aab466ab76d3b515105b94f64d2f89c54a80612771d5aa8ac136173bbca9e9ad6341a5bda61b066a5d95c4e12a23622b5b2f81e0"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "54ab4653e6a78ffcc7f800b9ecc9b9645a00f421ba19221749a39675c2435bc959c602fa3755335b655057439c982516"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "3384c9aab10d0a3dc9da29ad8c7f91217f91e79313f0d254711dc5e7487d2b8eefec0087a42f7b5ea8f974c43fccbca9"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "5fa0583884dce4d1f323d931a486e6f5a1b5d81d7a0e48904213bbf49c32c376"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "053f69f27c958b7b4df813fa7878e88d9c9676f83c40868014c99a62ada01f0789fcb4ee6d04225e3f0e09b69e4c0f9b723ed863b26cf09b3b4037d70941db2f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-router@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-router/5.0.2/micronaut-router-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-core",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "2700b35f7eb7169fea2b5066dbeeb5ef"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "9c64ef9baddc287353677d84e714c9502318d5a9"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "dcaf9eef32fcde1008e8fbad79aa5a728a78fb596aa6f1e122cd21685eaf83aa"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "7dc6dacc5a54db0504f5e3843b9559eecde7333c75cf09b3c5d817f9d35e5d80295e51e15d44622fdf304b8efd69da6d6fdb8b49ad41a5cbb7d1eb522ec0d500"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "158581512897628a56a4a60285ba0e7f1056bf861650eca8963e20f215ae4535cc67a601797b57632a9b4976a5928e32"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "b1956c06d58a99266526ba20c6f391ab266339da0ef24965256665ac094826820120fbcf11d3992436ae551d69dd768a"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "bc654cb017be77d9f26b42fc0209eb9769aa1a51b14ae0f541123a3ebc73d067"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "a2c412cf0181d889f03c9bc810e66b66b277852f4047a6407272c84cbebcfc47958229714083d1d617d82026f4a497edfb0b3478c4faee70f18756bb249bf929"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-core/5.0.2/micronaut-core-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-http-netty@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-http-netty",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c01f12a20ad15ae3fa25a6ea23c1a971"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "1e7c0e323c91337d6bc5104eb42eadbc4a7c831a"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "a4b67abba49eefd3a5c6d0fe0ccb0ef0807d67674ffeaaec6115ea92ac4c76f9"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "c29fe8566867fd58b08e43529c01c438160992a1455fd6a139684b761f5809ae32cbe1dc7153d6b227c6a0d6716d52048fbd52ef7d00c1bf13b23328c945fc52"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "6f3ac20ae2a1cfccd5159eae46a97e5cf42ad02d13fa446bfc316cf3e2da9ee3c33940fb77b66cb4595a75e97a8fd81d"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "8eed0f6f61b62058e6befd795bc1714a4f45f7788c18b483184d443ce81f0db5ec95587140a82104bc26a1643f5f01c8"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "03517bd443a40e07209a89c5c4c236614382c5df63e3e186e13232ce0ac6c7df"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "338acd87e3d0362f490a00dd8df2e199482c4dd7216daaaebcc5fdbca1f3ed42368df02d8c2c0eee2afc46395d32da5e2bccd52e624fc66625736117e620bdd1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-http-netty@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-http-netty/5.0.2/micronaut-http-netty-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-buffer-netty@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-buffer-netty",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "92b9dba1d9d886606556f0376f41edab"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "07f5cbbe427312b5c82db207182a2c738ad92788"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "0cb635992606fc054667874d33639f80e8e2580df1c522ec1050b026c417a0dd"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "6ca278f0d46f21ad3a158009b6668dd59ffb76262ef60a7618501a2cfb40e928f814a0c6ee8300aec97c891608cefa07f19dcc1992046ba783a935f8624d0074"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "a738757ea20f28f903320e4511dea2b2180254392b1423d8c82b45780426aea6ff64d1e9abf6bf6c275d4aaf2ca7dfd8"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "807e9bbc5b5f8ac27d7969ca01e9f39534879bbb20a7bf117f98a3ab9c80ced312da1b8e509caa8a4fbf99c882805d28"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "b949620598bd610ffc4efbfa4b0210b2e3ff059bd50585a8e440ef990e3fa3f6"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "ee112a8a9e77186b66453462ad58d97a9652a211f520a516320a2168a4b14fa4ba34213e6bc712e2f13987929efabe9560cce716b0b8c38a82ca148d964dd6c5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-buffer-netty@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-buffer-netty/5.0.2/micronaut-buffer-netty-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec-http2@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec-http2",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "877ea41c60fa20397bb492dae2d0d1dc"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "c70540243427c8c952473f55813c6d459817de42"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "4a9b052bd815c765d9c05e27b32abbd32a2c7c3e3364ccb992ce71da1a26bc0d"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "6a23ed0557747d505ec164bba4fe8bee76f35bc55262274d466281660d8ec0f5ac99128c5934b5a630ac676600d84925f20fe627c6ccec163f039ba49fbfe407"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "f7f672b374ab33a8fca8b00bd2bedce72436a0fd291f64161ba1ffda9bff93782ed2acbfbbb8e286209971a3128e9189"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "7cd4d591a2b8c675d325e426ebfce1dab4f5e52f12fc600e43737f70f0fce753a7d14fbe76dfa2f8b4e166247a38cce2"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "abd18e7d4fa7804454524c48939583814219482c0e61e426198ec77284aa8c8f"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "33133e87b7510c9a762b21ceacf11333c4d7b212f6fcbd24833398a45dcded3a9f93e31be685ae5c57b06ebc5b49fd888e336bb63113dd1fb9b5172b722dd820"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec-http2@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-http2/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec-http2"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec-http2/4.2.15.Final/netty-codec-http2-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-handler@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-handler",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "28d5ec2e1631f2fb8d4f2e19cd859a34"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "d5344afd1148e3b9927a74be019605ebb0937a93"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "99b59e4bea72220d2aed52df8baf37d97431b06ade0b135226cdf73168975eab"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "6873ee3a5a5502d0c3f8671ff73745252408b606f4de9241f84e41e9a5e08ea866aac6fd9000bd836e72b5b15f68aee6175c9d5959d25ced21542c50d550b8ad"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "7307a360730315c2e4331fca4c8a6aedd0690222f4a12680f0a65eec809a37cea050ecfab89617c6ff25ac3b40444721"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "bef3e43b522ac2236b4115019ceb694f38abf4fb445da89c670967a0330e4b8df0267b2151e9c25c30231dd7cf0796ce"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "efe4035c5e8ab855232dfa5dd27c3d932c5dfe1667b4f857b45e4538566c431a"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "a39047051d02321af47bebfb22f3f54027afb1b7d8ea7dce33253aa0d57d09403c16f94e177c233c32b29c30f7e061c81bce8241b0de91848f602208cfed0008"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-handler@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-handler/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-handler"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-handler/4.2.15.Final/netty-handler-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-resolver@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-resolver",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "66cdbaad85a04936f23eea413d7dd52d"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "b961a16d379b508b473e064ba06842bba280f4e3"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "24318497f2a3a645964fed418f48879ba11365cab8e1f8d66c47fa7da15ef19a"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "bad4425bc195209dfc7eb630a06b52923bffffaceb585f8a868eb6c6c177e5f58b927bea26a0a52b1deb39a1cf524b15be160d6f02d854c6e4d13087ebd3e830"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "6f8ee405f4af88dd1bfd85d3b3f6f5c84d39f6a79d99897f68b9335350173a1fc90576743a1d72ba1e5e178d3fd099c0"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "f7c777d8887e5946d0ece2767da04f82ab8bfc03ba59955d8272aea4d08b179e5c2ca55b6d2b789ad38be4858d8711ea"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "e1017b6583dc99da2253c00873115b4b4f54c612dd7e7504db33647d2ae905ba"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "59cf8a55acc08b7bf0ff32744375c11f34acc516d876310b16e789aa4e8cb442e591a6e8a30054947505809a3449cf2a37fc75dc96402d4b2276bb838e6e91dd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-resolver@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-resolver/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-resolver"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-resolver/4.2.15.Final/netty-resolver-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-transport-native-unix-common@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-transport-native-unix-common",
+      "version": "4.2.15.Final",
+      "description": "Static library which contains common unix utilities.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "208a76e2e8715abe4d5a4123b0c388eb"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "efb6943b4de9e0226a5ac35330f232605424af02"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "b9ea9fc5ad5eba04e99afdff75b2eb97b5ddfb2ad772e2f2ef5d8f277f3cbd76"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "97ec4cc69142cdb06d320bfd054b0b772a4e0ba265726d23765796197c2825187c0422f5c49ecc88da7d3167ba58b06dbb1ea4ed60d1e5db3b739902ee023676"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b60724518ba80f17fffe1d2ea179fd15e92d53808dc7c70326c6fe8a1fdb8f3cac57a5fff96ad97513f722f791331314"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "32b4e5264bf9785c48e853c3b76f76f537406a742bce943f0eb05ccb52705997e17840f3cc57fce1c12a6a58116f74ae"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "d3af7993f162fc3a9dbf731f8572a66fb0286e3d72203179f1edb3c84666e96e"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "67c37388ef3c4c10c5a625bc5357c89c4ff2ef24621cd6ddd3e68d09244185bca4a50d34ff269bf73c890e8d1540b6a25c2ca95e63997d02e0fa4a2c3a481ce4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-transport-native-unix-common@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-transport-native-unix-common/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-transport-native-unix-common"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-transport-native-unix-common/4.2.15.Final/netty-transport-native-unix-common-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec-http",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "74b024529b5d558929a93ca1f7b8af89"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "e611826aa054371bb9a17f27bdb05755a4cac5f0"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "76ae57e87af37b3c4107140f50b9244b1456163a6a225510838f7c5a4458ec22"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "97af93a1f98cd0e5c8b77bdcd06d5342454690761edbcf36ebf01af14ad0754af06362139756add35a27ed8175b59b5cd879219838c1fe45f216bda1e6f8bed5"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "597fc3570b0be0944c67ad2be6481e09a03e5bee9527d1e2cfa20726381ca1511eb3963a6b16050c84c8ced79710216a"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "be68b44ffec9a2603f9ff8efb4f5d08a48cb0bf3c2f82efbaef02711ea2495555ce5d6f1ad4e19c0f60f49ee3872db76"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "6cf88dfc93974f305432329ba03bf7b0ceda22587649cc60aafdc85291b22489"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "20660ee8183f43e8daee74bec1cbd56903e9f588639ac9b8da729a1aa34f3dad8131891941f223dacf9d8d7d3f9ce08098dcab4aa255ae54ec54b09d3045fca8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-http/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec-http"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec-http/4.2.15.Final/netty-codec-http-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-common",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "92a27d3fb05eafeb4da4088cd2c6455e"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "7222492c1af9c2d4d78d521eea340a619e242fda"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "78206aa7f6d197caa926291408c01889b6b910ca0f74017d3fcbdaccf9562959"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "2936b9e40ff5cc73eeeddca11518655d14a0ce6a2a89af1d2d4cdb8790f2630ccb99b8860c453a0ff8fab29a26f1dc3de4cb1664d9e79c732ac1e5b107713756"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b35e12411a3b83211b5e15f6fe7379a28af95a72f30b4071da1f0e893efc851362b2e09cfb4d9515969b6ccef98f93b4"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "25caba2a8c5962c88cc224a62ebc9000c9f5c7810aa7ca36334c8c37a6f65578738613b225db09ca615807c156723d9f"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "013390d6dd4bd00ec28f9ca6cf6ebc252737707ae3bf3d334d8ae57d7760f319"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "7fc70efbe585e0863522a567039dadefc55c072e717f3f9df7d6db8f186d8ccddb98ed8ea3a6fad5ddba2e073444f778af0f7b554e9900c1e9efe38ba14c1735"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-common/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-common"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-common/4.2.15.Final/netty-common-4.2.15.Final.jar",
+      "prunable": false
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-buffer",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8990ccfc32cdc95a53bc262eb1b12bb4"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "2beb620803bf871cda2dd5d46b8f831e8015dd34"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "1361fd9c9ba85b9831cf54a1b2e45ddc3ce34a768931726c099d3f5ef0efe4a3"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "32f95019291194fcf5c0934374520bce4671fe57eee3ef5c3c91c4827ec2fc117ab6d4a1b5be4468793c53864f74e8dc9cc556fe1d2163adfa19597dafd6540a"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "c7119215644f2624da89c2604e3b99eceb67d8154c5e46c1e98da63ac2bbc8306348a72a5cd329643e030cc20bdd047e"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "80d8acf58e0b1510dd9705dc8b9c179b78a7bbb16baa9349ecbd143e2d62d74e7161427e0546ca6decb2e74059feb726"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "60727e53ce4ae027ca99dd967429c827780b8ecff34d662c3c0a2cd46afaa906"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "01937ba9ce883d363e91f643ca0f34062f4f0ee7f1bfe7a7b77fbc44955b3ff827beb7f9d0aa093acef3bf7390428a29c870989c5c2f1006e34d84205e34f4dd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-buffer/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-buffer"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-buffer/4.2.15.Final/netty-buffer-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-transport",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c7494798baef79eb9fcfa98c4ab8fbf7"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "a000c3a6196ee40207b73ac619dcb339409dd62f"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "9fb671e96651066cf1a28dad3f1382c7c99df5b8326d4a214d9a375b311f8dc1"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "27aab56f39e621cc13050531aa45ca834b6ba2f7bf3b28b58afdf290ae3f8581e9d0989bf0bdf45b33a3193edf20f51f4f38333b9f97a50e955417288379f340"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "ff9ae5b87c2fd05a880e4c1ffe944c41d2f9b1563f5ea35fcdd83bc3700250643879ee2472022bb36fa24d5df041bdd3"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "c27c3370f3ad524e0cc492ca22d4dc5a8a710f832e5cbdf3183f9d0ffa80accfdb6290ce1c3a908eeca6961d7707885d"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "1d55ee670f739016a6edbdc88a4d9b63fb52a2151e02ae6810e173d0fdcec4ab"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "c2bcfe307a88d5c66143031fec6edd3a9ba2f0d263964d2f2bd40caf42bb47a0a0ee423bea890705b0761212b8cd028a2c76090139254db0030543cc3d9a9fe9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-transport/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-transport"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-transport/4.2.15.Final/netty-transport-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec-base",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "49e8598fac2f6433113ed0f76eff0936"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "e97149fdd5fb04858efa90e314651c8d700dc68b"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "2c6d39d7270628b8cfc3166fbd7a93d595958e59c461bc32ddb383c8c91bf811"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "711b2354d339182ed301fc65f9b600eaaa0226878ded50974c3dff1e9d064844af95250453ec9c5ea916eb3d00cc45569e540a2c7a6de439487edd4482c49d0a"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "e9ac07161ec30c3ea79379fd64e95351fb5ca7f6d7b60c97f7a40a22b28afa6c75410348595421a0188ec08693efebf7"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "bc819a45b845e1e1e27276c23c24e07b942dcf1bde9e1df6f53b2229d325a7a1b4f3daac5de88cb02a8915b10d07aea2"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "1e0652600d5ebc21ce6a74d89e528f1908222f8ae85e5eb9290b7f6693591bb9"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "9420043245482b9b54a72edd4d447c017e3d3ef88c871396d58ae0277bc642d561c0eb9196372618a775fee271d5bc8551311656a694004deefa9990736dbf8b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-base/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec-base"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec-base/4.2.15.Final/netty-codec-base-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec-compression@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec-compression",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9d00d226ccb09206324722a346456c6f"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "89fc4a20b7ae6af974304b1695405e62c4f9b16d"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "4adaa5cdd4d2e9b50b23e4c3eff42e73de6eb40848718b3aa84cd5b454da6ce8"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "e4fa499a0a2aea866ed99205ee54cea013f031d1aaceb0c8581be1f201aafd8d5f98f9be7738ed8111951728caa69b6849076f242d78ce7ef3fed92e2ec3bb2f"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "91b99d666d630bf1f0b8e02dccb98829b2d25ebe921dfe5e9ef46a0154f3da08be2c96f135f1478b9a35c86b7efebb74"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "7f15218e8fad49a564aa78d7a87acaf786cdbcb8ab4096ddd710d5377e2f74abdb6a235e107c4a58de7c4962c9f6a490"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "45c255ac06bfd94cded21ce06bdb6dbc1d6340b0ef2d4d02bc5fdba43cc00fc3"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "718e6ec32d1fc900c94ff01fb4ac70615d0f20372b192d649da40b0513a8ae806427c94c407ec2155f6d1fe042e42b5699942c89484cddf9f6993c6e34357b81"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec-compression@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-compression/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec-compression"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec-compression/4.2.15.Final/netty-codec-compression-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar",
+      "publisher": "reactor",
+      "group": "io.projectreactor",
+      "name": "reactor-core",
+      "version": "3.7.12",
+      "description": "Non-Blocking Reactive Foundation for the JVM",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4c97c2b5a71e2d89a4f710fb4f9ed2cd"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "fa00bcb9c8c50c430f1c3930dca28ddc9a888e18"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "474f94cabe5fda8877147521f37c791c95ef6b4a9dd59e589a6ddcc21b0d8e39"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "871f449244455f65126aef404f6ba759bbde61a2188f23f6c9eebd2be8d0208c629f5078f3d3eeaadaf0e8318e45cacd1ce5376ea5e584669981eecdc8de686d"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "454fbbddaec8e4daa9d53f2b43d838080ecae7aebb8efe61b45436ffae743c106a919bf9b3feb6748ed1a3efce1c1c26"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "8296032a9857de8445bc583987cd3aaf988286cc479c791e475637a13a10e7c769ddc307745f49a8e964141451a54b29"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "d062d7d5437cb5c674be37825f5a75501199230eb6bf2cc286763d327911ee84"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "5e7c147fd738618c2dd9cbefdfeb00217902ca8c0ed0d618e864e34cb34312f5a144fc4e1b1f001f86d7d90a477b0b4f4072d967d724a125ebfe5b442aedf2d0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/reactor/reactor-core"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/reactor/reactor-core/issues"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/reactor/reactor-core"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/projectreactor/reactor-core/3.7.12/reactor-core-3.7.12.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar",
+      "group": "org.reactivestreams",
+      "name": "reactive-streams",
+      "version": "1.0.4",
+      "description": "A Protocol for Asynchronous Non-Blocking Data Sequence",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "eda7978509c32d99166745cc144c99cd"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "3864a1320d97d7b045f729a326e1e077661f31b7"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "cdab6bd156f39106cd6bbfd47df1f4b0a89dc4aa28c68c31ef12a463193c688897e415f01b8d7f0d487b0e6b5bd2f19044bf8605704b024f26d6aa1f4f9a2471"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "ce787a93e3993dca02d7ccb8a65b2922bc94bfaf5a521ffb5567300a9abc3c222ebbfffed28f5219934ceb3da5b3e9c8"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "68daf9498232897989ee91c1ad47c28796c028658cfe023c2907152cd64ac303a3bd961e5d33d952be7441bee7ff5f14"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "0c2165ea39330d7cccf05aa60067dc8562a15db7f23690c8d4fc71cd3e49fdd8"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "19c2d866a6c4d7c61ceb63d3b98324928eac880c8f23d84202c1145b4779438b1b275f1d20c74b06ecb0fbfe83baaecce3b4366ead0f7cc8b7b6916a8910c944"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT-0",
+            "url": "https://github.com/aws/mit-0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://www.reactive-streams.org/"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty.contrib/netty-codec-multipart-core@1.0.0.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty.contrib",
+      "name": "netty-codec-multipart-core",
+      "version": "1.0.0.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "81690e0dcfcdafc99b80ea402ad7fa1d"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "1f817d149ac55f703474156c60d5c07cbcc921e2"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "74b2428a2b510766a2cee9a0ef7e7a99cf4b619cc960e0815731772e7c41f330"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "831dbe5e0d837774695e7ec6f08b86507dd063354ef1f10ac236e59bb1db46dc017e8ef40030e0dd8d6114edaaf54ebb3ffce2e4ad86fe2f53b6e8dd78e12be8"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b64aa9c78239c2a5372785e9159044022dd82d260a1c6535fe9ca18a131cccc424f2dbfd369dfade60b4bb194d2dbc28"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "b91f02f1cb9d54ea74dae96370a18442e0cc7062eed732f6842cac0c87292cf09b16d217c5f870f4bfe9b6c5c5049506"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "d9a5ec6216e85701b1d62632a6b3630b90338b9d166cfb722e5d0d59af19f825"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "67123532b764d9e8584e2d96df43349192de85026efdedb595b0c4737f452050d265698e6ab7434ec58a707e44973b401385d80683bfe3b90881b4eec531abec"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty.contrib/netty-codec-multipart-core@1.0.0.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-multipart-core/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty-contrib/codec-multipart/netty-codec-multipart-core"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/contrib/netty-codec-multipart-core/1.0.0.Final/netty-codec-multipart-core-1.0.0.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "a96c7e05db64fb7977bb3a39daf28a74"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "bfb2ba7974e83ba3a412fef8818667494a2efe19"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "153b11a166459733af79fb0d4667f30bfa39792896f689b21c93a4a4091387ea"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "460e9a76274e472e65dd0bb4e485e59b9696750cc643cc14d72008447aa8d8efc9f44af6fb21c1433688c339c265c34d87073844b314f6ec721354515e8e2c20"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "523022c5b672f87c52aea7b93c138e149b3c335ba647570b4bcc14835b83f2c20afbade5bcae57d313870bc6f57d604d"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "65d59a683f25a7530b8c3f5eb33cab92b4fe24cfabe6c91b37fc978bc2ccc803504f70a554233e38255e1ecb0ad1c585"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "e0eef653375f05e87c5d641784cea70be823935c8f77c54b22dda421c7ec3578"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "871fd534f5f30dd30951b3c7276fb5d8b8c0a0752d05ff5a72823cd2dbb9674f24940ccfaee5be8972267bd43848dae1041ed5ec2c324ec53a540f38e97d14fb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec/4.2.15.Final/netty-codec-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec-protobuf@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec-protobuf",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f00b16ca3e971b86aae39348cd153a11"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "106fa7bb7b7cb288965a576bfcb96463241f33e2"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "ecf3a24695374b3544700d94db56875da90c1dfbe1e43c744dcc15e1e8998a01"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "9f9eafdaf9ef04ad22a681b2740613bee842cb85af62019e97e1e4a0f59430fce14d3591bcdb9c7815e9065d9cb4cedb256ac1eede8ef1d6c4e5f6d9e9f6b7b2"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "ea3eb0ca59ab7512a96739fe702125e917f05ad85477b78ec5c8f60057bd009ed3a0b71ee408036653c81412c0ea2f24"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "cf49b9a442f7065e39aad6f656155d12a9543125ed3c891ceb00e0245d21109024de25f31f5c16195ad00b41eb36b6e0"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "432c2f4232d3b214e525d799b3c184b0c3a3287caede42c04841844fa508bb17"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "66138f72e14bafd8d878b4353cece0771a90c927a0bb2705c6c4b1f15558a9a021ec2c84207848b129ec19ffc113cac0d7333885ca7318b124900efc4c8b9433"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec-protobuf@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-protobuf/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec-protobuf"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec-protobuf/4.2.15.Final/netty-codec-protobuf-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.netty/netty-codec-marshalling@4.2.15.Final?type=jar",
+      "publisher": "The Netty Project",
+      "group": "io.netty",
+      "name": "netty-codec-marshalling",
+      "version": "4.2.15.Final",
+      "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers and clients.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "565c77a6d52d28fa2360bf2d2231b77a"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "45e92017ba43525cc52610ea04d4fc73b31f6972"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "bbc655b5253387f566b25d4185152951f0121fb3afef2c352e7aa52b9fb965d3"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "9ba643179701213ab45abab525b0d4527e19829918554f914361f74a30b3d4f1fb7a7631473b4110900623535700b9d9f974cfae6f587bcb9de25f1d5765e213"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "e0ce79541ae7cee7deabf0575ec0c423021c024159b68bb46b9ee342c0d4094da388765ea978357c17370ab97b5b52e0"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "1bbf888fc03a316989533c0978ac533eb61793174dce1d15aa21a3afc2cc23d5ff2ab9e82cb3d64e6cdf6f343710059b"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "bffaf401c8b9f1e59196aa6bb85b6d1e77f8d637d4f2e8dd4747751fbffb9e60"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "6402fe90f92dd11e7e287a0c44a6205cb386e39a2ddc593143576cc60f09644e54d94402566ce677afbb76db5dfcb560dba8293a5de11b999cd4257875a90b3f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.netty/netty-codec-marshalling@4.2.15.Final?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://netty.io/netty-codec-marshalling/"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/netty/netty/netty-codec-marshalling"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/netty/netty-codec-marshalling/4.2.15.Final/netty-codec-marshalling-4.2.15.Final.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut.serde/micronaut-serde-jackson@3.0.0?type=jar",
+      "group": "io.micronaut.serde",
+      "name": "micronaut-serde-jackson",
+      "version": "3.0.0",
+      "description": "Enables serialization/deserialization in Micronaut applications using build time information",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9e5bb3e8762b6a18a9b0b504ea85416c"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "655e40a06f823608b0ed7847587686d35e1dd870"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "33a4ac12801c65688351d1ce3ea7f94b1cb0ee0e590854d37ab1e200aee6b0ab"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "55dd5794e85aff488e7e7ac96e8e7b089561f90a2316257e247673905737aaed6c605958e2f9eeac1a211f477d7f0b069d179f91bf146ba8c20a7e586e1c004d"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "8724231ecc7703460880fba095c76ccd1a8bd4f6d7907d1a439cec0bd702b41bb9aab4bec38955510310470e22d0567e"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "cb45e49cf61460ed4589129edf3d4249305ede4115f026fc88da8987649ae7aa3738244560b9427fece7bd30645cc026"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "229f95f92129628dda457c3033354f79a6c2b3a9d1ee11820571c5f57efa8aa6"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "0ad2d580f57802d89c253d50b83de4c67f29237944c1b7846b8bbbb5993237d22620464b4bdb45f08ebce3ce80b3a94227fb8e78d5201b3be25921401876e572"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut.serde/micronaut-serde-jackson@3.0.0?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-serialization.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/serde/micronaut-serde-jackson/3.0.0/micronaut-serde-jackson-3.0.0.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-inject",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "4d3a15547cfc1e704591d745d718e8b6"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "32d7434e649a383e391ee1629499ff0153319a6f"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "30bcc2607d0be7b15a089a4d2008915d07737b529952f10e5b9b6b371237d590"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "9a128bcbe13c6ecbe335e9cc7c1ebda57fc73415e0b83a1b776397222407e30495d3fb3b23f1173d99922ed386edab61e330025b09164b1d31895ee3838fe9cf"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "522c386dba962d3a16fb2e617f81faef4998c6c44679b52e3572e00398b420b251c028302e65a69749f4a9f9552f3b5b"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "f60f24d45ef47720178e2d03dedcda1a765c9a11a10727fce8a7131b120d8f752b274a0d16f2096726f48cd01c7a0fa0"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "3f498b0e156d000350bf0c6a1f88573ca6d764e11b296ff9da62b7a2e3a8b8c9"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "6c50843bb9f9cc77b78f708e66cc21183c9cdcbd61a8f66ba0e647bb5406f1243dc96da818cde9535d5fc3e686e4cbfe1a2c7cf9e811bc969126750bb4decbdb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-inject/5.0.2/micronaut-inject-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+      "publisher": "Eclipse Foundation",
+      "group": "jakarta.inject",
+      "name": "jakarta.inject-api",
+      "version": "2.0.1",
+      "description": "Jakarta Dependency Injection",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "72003bf6efcc8455d414bbd7da86c11c"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "4c28afe1991a941d7702fe1362c365f0a8641d1e"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "f186b2ada470abba1cc3b4f8c4373d940fb7c71a051b2c26f7c204ad4dfb69235fbf3f9c33da36d744cb90f52d921c51d76c0ff263bacb35eafb66cab83dc47d"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "405bd297a73901f013d48a0da028d04d400f3e61f4997c0e7297eb08120670a0e242e0002db8f130c33ab16cb02feb2d"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "4db7e54434d0a208c876868f5595b808f2728c0455feaa752ab7b569a2186fc37cb891c9aa0076de3d08f6da6ff06eba"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "3a5aba9f1ff1a130b76af886123eb375fa578498490df3dc60bb7ce7d59e9404"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "00bba8efc2d6e7f0a509b321868d75f1aaf0681a750d089d913bde8424ab7bb88aadf49de6e291e352523e4f8c117b1b48033ff31d4d665dcc43c4c6ea000ba9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/eclipse-ee4j/injection-api"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://jakarta.oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/eclipse-ee4j/ee4j/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://dev.eclipse.org/mhonarc/lists/jakarta.ee-community/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/eclipse-ee4j/injection-api"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
+      "publisher": "Eclipse Foundation",
+      "group": "jakarta.annotation",
+      "name": "jakarta.annotation-api",
+      "version": "2.1.1",
+      "description": "Jakarta Annotations API",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5dac2f68e8288d0add4dc92cb161711d"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "48b9bda22b091b1f48b13af03fe36db3be6e1ae3"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "eabe8b855b735663684052ec4cc357cc737936fa57cebf144eb09f70b3b6c600db7fa6f1c93a4f36c5994b1b37dad2dfcec87a41448872e69552accfd7f52af6"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "798597a6b80b423844d70609c54b00d725a357031888da7e5c3efd3914d1770be69aa7135de13ddb89a4420a5550e35b"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "9629b8ca82f61674f5573723bbb3c137060e1442062eb52fa9c90fc8f57ea7d836eb2fb765d160ec8bf300bcb6b820be"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "f71ffc2a2c2bd1a00dfc00c4be67dbe5f374078bd50d5b24c0b29fbcc6634ecb"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "aa4e29025a55878db6edb0d984bd3a0633f3af03fa69e1d26c97c87c6d29339714003c96e29ff0a977132ce9c2729d0e27e36e9e245a7488266138239bdba15e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-with-classpath-exception"
+          }
+        }
+      ],
+      "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://projects.eclipse.org/projects/ee4j.ca"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://jakarta.oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/eclipse-ee4j/common-annotations-api/issues"
+        },
+        {
+          "type": "mailing-list",
+          "url": "https://dev.eclipse.org/mhonarc/lists/ca-dev"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/eclipse-ee4j/common-annotations-api"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-jackson-core@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-jackson-core",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bcb83552c7e0de990fcc8bb71f626124"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "b92fc2f28a59224969d294b3e4001dddb7c45469"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "20e10a6f8dc76308ead0713cbc2f5502cca051d24e3887554f70900772e78211"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "b62e82aaa081d18a202b444ac5e76c7bb365bc4da141921b16b417e41ea46d98c3d018fb45bbc10cb5ffcb9ef3c72e91943057c8199399c5d719e0ebf1cbb140"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "729ef015d29f6de4da2b372290f58bda0c2611794aba607ea308b62bd2973d6de129254d3cc48ee7e64d96acc2015685"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "e34a7775baf2102d1b1e4c6f03fd228b40ba321da697cad6eff091d9f3a96a9ea2cfe39b71b0dfa8f8e6720d35fbbde3"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "2f97b8d9c3714726b7e92846160fb8e7201038c588075525d864f709e8399ecc"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "64c228175708c88665047499881379d47074df5e2d726ac42fb020aea589aa4397f2352e84f082431e8d5a4953376796308beab8648b181faedc9fcec2dedcd4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-jackson-core@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-jackson-core/5.0.2/micronaut-jackson-core-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-json-core@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-json-core",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "7953160b4b1d2c0fe8422c3ae8fab887"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "fae68eb4e7a777a35e273fb4bae7145514a8e0d3"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "a5680f20e12239e02c49227175bbe143294bf0afe518c054d5c7946eac51369f"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "e673c2724ca16702dcb62d7610ecc497cd116c48e5b458f59350cd46f17a8b878da72793cb6c1998ebdfbdc8ceb98651c4a49b6cabd11e29c4bcbbcf11b137c7"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "9199a0bc910ac57091b34e2903706bafcb7dca904127860d5351c9023057e8bb318c9ee65056ffe838fb080f72c347dd"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "231a6f9067fcd8827537186d8a1de264e0835985955997328c01c509cfb747311c2dfc1000d779db98082b61835f9321"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "f5bfe0ee20854c80db7e86232bf629cb1371b78b35a64051f3af9fdc5076ca29"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "86b2ee14a8bb6954aaef544afa2750b23e1cc8cb215d1b1a6d8debf934fc158f0e5fef51c923bff0a363e08780e74f03eb82e1c1eb742f7f25c9b85ec1792274"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-json-core@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-json-core/5.0.2/micronaut-json-core-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/tools.jackson.core/jackson-core@3.1.3?type=jar",
+      "publisher": "FasterXML",
+      "group": "tools.jackson.core",
+      "name": "jackson-core",
+      "version": "3.1.3",
+      "description": "Core Jackson processing abstractions (aka Streaming API), implementation for JSON",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "628dd1d8c7cc78043d6513bc9e85eea1"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "2f1dbeb81fe57c51e660534d3678003e514c1eb7"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "e85ded25f75d8dabef7aa09fc155ef616f0a97e96bef6615f7a7800c2a76c6ef"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "544f507e138534d68712837a79a97fa53974f41480efb0f900872fb8035f2cf58a5bb9372a5d0ca7232895039fd5fe6632194ddfd25ba541fa3ad0ac56a6e9bf"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "7c3bf4a6b970816249d76c6498f0e63e4d3684b84561012fd719869e3637434275f1490b783611e99cfce8694156d088"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "8eb67bb143942a7660109971e1fcb569374437ff2c7a5b4225e3a2af6eeb6c6b292111e5c9c99eed31bb78ff05b7622d"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "7cb8f3f53b5ca4b15c07d55a87262f549ae6bd75e2bb090d149952dbb7264da1"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "cb0e202ea48d86665e3d7051b553b97303fbd1ad83c2ebb2af23d380e9c55aecdc3d62cf96df4c87421a625b78a92892687d490d8dcdb20193720afa4de5cb38"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/tools.jackson.core/jackson-core@3.1.3?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/FasterXML/jackson-core"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/FasterXML/jackson-core/issues"
+        },
+        {
+          "type": "vcs",
+          "url": "http://github.com/FasterXML/jackson-core"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/tools/jackson/core/jackson-core/3.1.3/jackson-core-3.1.3.jar",
+      "prunable": false
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar",
+      "publisher": "FasterXML",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-annotations",
+      "version": "2.21",
+      "description": "Core annotations used for value types, used by Jackson data binding package.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "e0d0c3e7300954f73e43c67d933aaea4"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "b1bc1868bf02dc0bd6c7836257a036a331005309"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "d832a99867acc2d5afb2596da760c50e6a6b54c1bbc8e6c4186f267a16e1d55c7a916ef8b034ad6b277c41e3342b91dcdc2e3dcea8bdccfe89e7c147894591be"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "30b15d68f8da6f6c26aa9f6c95d09152b6c1a8092cd976cf600d63d1751509a73865f937e0ad97d8d55bf20f6a749b44"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "5205b51f6ed689cf31b58b98a61ca9e17a439c15d669dcb408ec4d430e77ac9ac57d39d5ca1f9973e8d184f6dd57ec4f"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "d6782d188a72b2bb96e4b595343e783012b3f98c30f7b9950244c21739334509"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "b648f1e9ffe818227d53fbde409e61858ac22d3f78705eaf08065587ed512c9b33b0f5e2222356bfb33fb2973bb5a3184e31d2a7099f8fc8d2fd23eb4612a4bf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/FasterXML/jackson"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/FasterXML/jackson-annotations/issues"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/FasterXML/jackson-annotations"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-context",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "956e23523833355f26dd61909f95827d"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "643d6738fb24f899930913b9f6895b8d3e52492a"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "9b8e83e63477d53890f7e065a2bc4077eeb77a92b86d43d1de4000b09cba17c2"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "e41088a1f474713a3f8ce9ded52a8127f93d7b37fca8aafea839d18e75d862a76037e685ce83fbf6e2c940e7e75b480dc3b0abcf2a7723533890f58ce2848d44"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "e7a2a6bbe8f3bebb33aac345cb073c04dfdadd94bf234b4bb0b7eb758596c221cfb5984e2fb2888116d1ba40725df7e4"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "d0dd5589fc2fede5dec046bd4e0e4afe704be0d10bf2fb1f71ce59f593cdba4b3e4773c4fef5e4ab6fb07dfceb303e3e"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "db243ebd378218ec8b7303ec78bac0ee2e9147c2b9f5275648449e0564b68b8f"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "2e189c0d4b0f5569ef9bd4f501defff59f11cf5ba3eb85d0019c71a2dd71dec86f31a391cb65b263f2c86645979c3ddc89058e92bfe5e80b203173520c013f0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-context/5.0.2/micronaut-context-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut/micronaut-aop@5.0.2?type=jar",
+      "group": "io.micronaut",
+      "name": "micronaut-aop",
+      "version": "5.0.2",
+      "description": "Core components supporting the Micronaut Framework",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8fa7e943c3dfd5f9dd2b8d78a19f9c05"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "a75acce681fe02ee9c261627a186cc1aa85815c0"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "b92d6192ef94b54bed616a21584aafb0c5c02738db13559e4f96bcbca3d9ea09"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "efe7803782f47968361d3ebd4ab9703e86961478a8b317f29094c5c77a25323e283c0e32262a2f5fad2651226904b80265a967ab43c3c80e11fee5d182caf853"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "1584db89216605fb5ded37aff52753d5e440868ed9b874f9dd0a7816ae6ac44009d5a942992fbbb21bbfe0d2498a505a"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "bbfe4c57581de22154fdfe317bcd820b3df1c9c686bed323c5e79564ace85a95964b053c63be1bcb2cd85b495c973cc1"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "5d693cb96467ba154d31152bc6e8a5dd267e0932777d58ca3ef3e9a1ab27a2c0"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "eb9e60b33a6a4060c4b5ed5e3a71ee34958696f9313b6d6d93a404c569e4baf374d1658e65e12e5bff4029eee3cc824092a37247604545b9f735ebec5a2ea937"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut/micronaut-aop@5.0.2?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-core.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/micronaut-aop/5.0.2/micronaut-aop-5.0.2.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut.serde/micronaut-serde-api@3.0.0?type=jar",
+      "group": "io.micronaut.serde",
+      "name": "micronaut-serde-api",
+      "version": "3.0.0",
+      "description": "Enables serialization/deserialization in Micronaut applications using build time information",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "8af5df538594f510cf5a68bcbbc77e23"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "a85714e1a9158042590eea1c2a69f1408a923620"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "482ccbd8c711bc61fa8d367d6dd34145d2a865f48f21d7b308d057ac54e5ac36"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "dfe34f5090362ecb540f407be305a60c79e9425e57b92531b881e8d0de40224745324e18be3b13decad9bfa575a0c0ff9536636feac81bf5bfea46e996a6ddef"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "fc4114f5e8ce9aa5e130b6b5c41a0bf26cb7ba3e0c3f503c947eb635226c14a8d9309d563e8b4887532ecd53f95ae08d"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "66330c5c34cffc99f42bd44084016f5e20df3f99b399acb478db17d03c158684e88d11775d64dfe56ebce3e088092c34"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "d58a4dbffb1f3c0fbc13188defa05e43b07c10fd489ff14c6029610f6961887c"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "6d4f6c004f2543ca295137ac95524efe1e3a80ee06430749be35b4b9b530e1bc75b86a9f6ab4f852fa6f37039408dd45640b173a8617fe3e4401b64efcb6fc9b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut.serde/micronaut-serde-api@3.0.0?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-serialization.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/serde/micronaut-serde-api/3.0.0/micronaut-serde-api-3.0.0.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/io.micronaut.serde/micronaut-serde-support@3.0.0?type=jar",
+      "group": "io.micronaut.serde",
+      "name": "micronaut-serde-support",
+      "version": "3.0.0",
+      "description": "Enables serialization/deserialization in Micronaut applications using build time information",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "f998773a6069994bb6be97e4c5941a68"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "6791b8a69b76368689692356e3a6703a70d2aeab"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "a594d32414a3431b31940c9c9a0988cbde75eacb401d915aed03b44efb506c72"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "6e96ba1fc1cd5f0e2dccbd73788b87342f96218f6cba96dc58c46141a6dea33a0bf0bcbe6f28acad89af4c80291fd02b591ac70cf17fc7487fb28a85b86df1ac"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "bbf0189b68bd831fa726845184025176f51c40fbd726f9d8da258ca12152129fad96d218ad38a152c25b05952c4ecf8f"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "a00b10b65af3523fb67db93765d2a8a227b7b20d503b6a14066d3968d36d14916447193593f7524739608ae5599e8e83"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "1ca7ecd8150e37f91dd563d282ebc4bfb0fe739453efac66846f8b4cc7fb77f6"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "a45c27b31509876e7c3631fe909fd586a68264736f9da5b2d0dec6b0417ee84a0b3ac6361534492a5a9e906000721dbf4b7477d4b05c0b97e01e28b7d1f3970e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/io.micronaut.serde/micronaut-serde-support@3.0.0?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://micronaut.io"
+        },
+        {
+          "type": "vcs",
+          "url": "scm:git@github.com:micronaut-projects/micronaut-serialization.git"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/io/micronaut/serde/micronaut-serde-support/3.0.0/micronaut-serde-support-3.0.0.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.32?type=jar",
+      "publisher": "QOS.ch",
+      "group": "ch.qos.logback",
+      "name": "logback-classic",
+      "version": "1.5.32",
+      "description": "logback-classic module",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "cc1b628dcb1f44089d0decf8a4cf9009"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "2b1042c50f508f2eb402bd4d22ccbdf94cc37d2e"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "2d4cf592db78be2de4d6140434c2fec170dcb16a09e8c8b7b207dbf5e31b848a"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "6f28dbc23ce773773fdd73801aaa9491c3300fa0888efdbc48909a60f191df4536328d2aeb6f0e91f05275bfd55b2b220ed2c30ce5ed4f31012f42eb11d79d7c"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "aa437c8f4b8a66d0e072a1c41cd7f747631554b565246b7e250e392984195d2b284307070728b0aef32d9e85736a3508"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "72f659c00d07f50367b08b21cc16679ddd3c8945d3fdab1ccbeeda930cc71d873837e56dcdc4cbf0b3d546a75889c58e"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "84cbb3d39ed018e0aeded02e37f4e6d4646aa7555134c7f071e7f2f6457cb35e"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "414f83d924ed37fbd89b1ac08f3357dbfa9ed7051871c427918f7c5c868826e60ff4a27a954554463137d15f8aef7a6d7e142b8b6aedfa4131ce2124dde1bdc7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "GNU Lesser General Public License",
+            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+          }
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.32?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://logback.qos.ch/logback-classic"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/qos-ch/logback/logback-classic"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/ch/qos/logback/logback-classic/1.5.32/logback-classic-1.5.32.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-core@1.5.32?type=jar",
+      "publisher": "QOS.ch",
+      "group": "ch.qos.logback",
+      "name": "logback-core",
+      "version": "1.5.32",
+      "description": "logback-core module",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "053d4a28d6ba4c9b6247c6fd859ca64f"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "fdfb3ff9a842303d4a95207294a6c6bc64e2605d"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "6a904d5778d0e361a9692f9cbe68b1b0620ae0f3eda2ec2ed09102755bf036c4"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "7e118f88ff9f6bdd2854a4218c4d8e2a1a031eb0cbff7eb2b181fc162d5004b6d89e7b4586616fffd922b4b7a432395892b9caa04916b114a87b518a1abd5157"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "b6ae51522d03a94d9dd33fdae4dbd81d9567c2e9191d7dafe20bc711148aaf77c0eaaae64bf3c9cf9a33aebf0755644d"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "2c899f38f50f14529a3710c703a430bfaeefdded4acc6d48caa8ee680d2e6f7f1ffae3911f059007fbba4c7ce57748a4"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "8369c927a69ba6d40db79c3156b17f4a24c31f3ff24c2f67f325e903310fc935"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "9d952bde380b128f5446eb2d040b73f44f019f50f05d31e08e1aac645c6014067b0787aa3362188a7babf74a976d5e58cd6cfeb3dfc7bdc3259ac50d0e3fcd96"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "EPL-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "GNU Lesser General Public License",
+            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+          }
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.32?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://logback.qos.ch/logback-core"
+        },
+        {
+          "type": "distribution-intake",
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/qos-ch/logback/logback-core"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/ch/qos/logback/logback-core/1.5.32/logback-core-1.5.32.jar",
+      "prunable": true
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.jspecify/jspecify@1.0.0?type=jar",
+      "group": "org.jspecify",
+      "name": "jspecify",
+      "version": "1.0.0",
+      "description": "An artifact of well-named and well-specified annotations to power static analysis checks",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9133aba420d0ca3b001dbb6ae9992cf6"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "7425a601c1c7ec76645a78d22b8c6a627edee507"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "efded31ef5b342f09422935076e599789076431e93a746685c0607e7de5592719ba6aacde0be670b3f064d1e85630d58d5bce6b34aed2a288fdb34f745efb7bc"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "814f860e5a44ead6c457676841eef471a8b87be31b84c60a8a4477a18a9cbcb6e3c2ae700969d5c5e52309d961e0537a"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "c8844e5b71e5ecfbb7366097ce34af2f5863d86d5ccc3f9ec384d8ade4b60ccc8124c7fc88664f1afd2b0962fc8775bf"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "4b4f08ad7606a3ac62997779484919a302267b26d26ee19125f8a7eea60e8a71"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "65c6845ebae981cb81b61107707ced39f5b377dae970b47606ef482aaf10e3729def0da40d9377c43abbfb483a5ceae039b0d51c129c50a6d36ad351a5d6b01e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.jspecify/jspecify@1.0.0?type=jar",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://jspecify.org/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/jspecify/jspecify/"
+        }
+      ],
+      "packageNames": [],
+      "jarPath": "file:///C:/Users/taram/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+      "prunable": true
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:maven/example.micronaut/default@0.1?type=native-image",
+      "dependsOn": [
+        "pkg:maven/io.micronaut/micronaut-http-server-netty@5.0.2?type=jar",
+        "pkg:maven/io.micronaut.serde/micronaut-serde-jackson@3.0.0?type=jar",
+        "pkg:maven/ch.qos.logback/logback-classic@1.5.32?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-http-server-netty@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-http-server@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-http-netty@5.0.2?type=jar",
+        "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar",
+        "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar",
+        "pkg:maven/io.netty.contrib/netty-codec-multipart-core@1.0.0.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-http-server@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-router@5.0.2?type=jar",
+        "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-core-reactive@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-context-propagation@5.0.2?type=jar",
+        "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-aop@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
+        "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/org.jspecify/jspecify@1.0.0?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.jspecify/jspecify@1.0.0?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-aop@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-core-reactive@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar",
+        "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-context-propagation@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-aop@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-router@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-http-netty@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-buffer-netty@5.0.2?type=jar",
+        "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-http2@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-handler@4.2.15.Final?type=jar",
+        "pkg:maven/io.projectreactor/reactor-core@3.7.12?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-buffer-netty@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-core@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-compression@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-handler@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-resolver@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-resolver@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec-compression@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-handler@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-resolver@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport-native-unix-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-transport-native-unix-common@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec-http2@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-handler@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty.contrib/netty-codec-multipart-core@1.0.0.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-codec-http@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-compression@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-protobuf@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-marshalling@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec-protobuf@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.netty/netty-codec-marshalling@4.2.15.Final?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.netty/netty-common@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-buffer@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-transport@4.2.15.Final?type=jar",
+        "pkg:maven/io.netty/netty-codec-base@4.2.15.Final?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut.serde/micronaut-serde-jackson@3.0.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-jackson-core@5.0.2?type=jar",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar",
+        "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+        "pkg:maven/io.micronaut.serde/micronaut-serde-api@3.0.0?type=jar",
+        "pkg:maven/io.micronaut.serde/micronaut-serde-support@3.0.0?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-jackson-core@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-json-core@5.0.2?type=jar",
+        "pkg:maven/tools.jackson.core/jackson-core@3.1.3?type=jar",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut/micronaut-json-core@5.0.2?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar",
+        "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-http@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/tools.jackson.core/jackson-core@3.1.3?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/io.micronaut.serde/micronaut-serde-api@3.0.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-context@5.0.2?type=jar",
+        "pkg:maven/io.micronaut/micronaut-json-core@5.0.2?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/io.micronaut.serde/micronaut-serde-support@3.0.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/io.micronaut/micronaut-inject@5.0.2?type=jar",
+        "pkg:maven/io.micronaut.serde/micronaut-serde-api@3.0.0?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.32?type=jar",
+      "dependsOn": [
+        "pkg:maven/ch.qos.logback/logback-core@1.5.32?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.17?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/ch.qos.logback/logback-core@1.5.32?type=jar",
+      "dependsOn": []
+    }
+  ]
+}

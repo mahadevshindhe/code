@@ -1,0 +1,17 @@
+{
+  "resources": {
+    "includes": [
+      {
+        "pattern": "\\Qapplication.properties\\E"
+      },
+      {
+        "pattern": "\\Qlogback.xml\\E"
+      },
+      {
+        "pattern": "\\QMETA-INF\\micronaut\\io.micronaut.inject.BeanDefinitionReference\\example.micronaut.$HelloController$Definition\\E"
+      }
+    ],
+    "excludes": []
+  },
+  "bundles": []
+}

@@ -1,0 +1,2 @@
+[engine:junit-jupiter]/[class:example.micronaut.DefaultTest]/[method:testItWorks()]
+[engine:junit-jupiter]/[class:example.micronaut.HelloControllerTest]/[method:testHello()]
