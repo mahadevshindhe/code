@@ -1,0 +1,4 @@
+# ENTRYPOINT = the executable (hard to override)   CMD = default arguments (easy to override)
+FROM alpine:3.20
+ENTRYPOINT ["echo", "Hello"]
+CMD ["World"]

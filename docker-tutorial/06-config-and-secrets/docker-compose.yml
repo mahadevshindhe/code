@@ -1,0 +1,55 @@
+# Module 06 - Configuration strategies: env vars, env_file, configs, secrets
+name: config-demo
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: notes
+      POSTGRES_USER: notes
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password     # official image supports *_FILE convention
+    secrets:
+      - db_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U notes -d notes"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+
+  app:
+    build:
+      context: ../apps/notes-app
+    image: notes-app:1.0
+    ports:
+      - "8080:8080"
+    env_file:
+      - app.env                  # 1) bulk env vars from a file
+    environment:
+      APP_ENV: "local"           # 2) inline env var (overrides env_file on conflict)
+    configs:
+      - source: app_props        # 3) config FILE mounted read-only into container
+        target: /app/config/application.properties
+    secrets:
+      - db_password              # 4) secret FILE at /run/secrets/db_password (in-memory tmpfs)
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+
+configs:
+  app_props:
+    file: ./app-config.properties
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt       # in Swarm/K8s this comes from a secret store
+
+volumes:
+  pgdata:

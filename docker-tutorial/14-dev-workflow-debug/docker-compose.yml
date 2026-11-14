@@ -1,0 +1,19 @@
+# Module 14 - Developer workflow (base file). Combine with overrides:
+#   docker compose -f docker-compose.yml -f docker-compose.debug.yml up
+name: dev-workflow
+
+services:
+  app:
+    build:
+      context: ../apps/hello-app
+      dockerfile: ../../02-multistage-builds/Dockerfile.layered
+    image: hello-app:layered
+    ports: ["8080:8080"]
+    environment:
+      APP_ENV: dev
+    develop:
+      watch:                       # `docker compose watch` -> rebuild image when source changes
+        - action: rebuild
+          path: ../apps/hello-app/src
+        - action: rebuild
+          path: ../apps/hello-app/pom.xml

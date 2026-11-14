@@ -1,0 +1,41 @@
+# Module 12 - Docker Swarm stack: orchestration basics (replicas, rolling updates, secrets, healthcheck)
+version: "3.8"
+
+services:
+  hello:
+    image: hello-app:layered           # build first (module 02); single-node swarm can use local images
+    ports:
+      - "8080:8080"                    # routing mesh: any node, port 8080
+    secrets:
+      - db_password
+    environment:
+      APP_GREETING: "Hello from Swarm"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/actuator/health/liveness"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 1                 # update one task at a time
+        delay: 10s
+        order: start-first             # start new task BEFORE stopping old -> zero downtime
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+      resources:
+        limits:   { cpus: "0.50", memory: 256M }
+        reservations: { cpus: "0.25", memory: 128M }
+    networks: [appnet]
+
+networks:
+  appnet:
+
+secrets:
+  db_password:
+    file: ../06-config-and-secrets/secrets/db_password.txt

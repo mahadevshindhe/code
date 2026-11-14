@@ -1,0 +1,7 @@
+.git
+.idea
+*.iml
+*.md
+Dockerfile*
+**/target/classes
+**/target/test-classes

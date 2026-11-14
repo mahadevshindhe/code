@@ -1,0 +1,24 @@
+# Module 10 - Private local registry (+ web UI)
+name: registry-demo
+
+services:
+  registry:
+    image: registry:2
+    ports: ["5000:5000"]
+    volumes:
+      - registrydata:/var/lib/registry
+    environment:
+      REGISTRY_STORAGE_DELETE_ENABLED: "true"
+
+  ui:
+    image: joxit/docker-registry-ui:main
+    ports: ["5001:80"]
+    environment:
+      SINGLE_REGISTRY: "true"
+      REGISTRY_TITLE: Local Registry
+      DELETE_IMAGES: "true"
+      NGINX_PROXY_PASS_URL: http://registry:5000
+    depends_on: [registry]
+
+volumes:
+  registrydata:

@@ -1,0 +1,66 @@
+# Module 05 - Full stack: Spring Boot + PostgreSQL + Redis (+ optional Adminer)
+name: notes-stack
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: notes
+      POSTGRES_USER: notes
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-notes}      # value comes from .env or shell
+    volumes:
+      - pgdata:/var/lib/postgresql/data              # named volume = persistent DB
+    networks: [backend]                              # NOT on the frontend network -> not reachable from outside
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U notes -d notes"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redisdata:/data
+    networks: [backend]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build:
+      context: ../apps/notes-app                     # uses apps/notes-app/Dockerfile (multi-stage)
+    image: notes-app:1.0
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:8080"
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/notes  # service name = DNS name
+      DB_USER: notes
+      DB_PASSWORD: ${DB_PASSWORD:-notes}
+      REDIS_HOST: redis
+    depends_on:
+      postgres: { condition: service_healthy }       # wait until DB is READY, not just started
+      redis:    { condition: service_healthy }
+    networks: [frontend, backend]
+
+  # Optional tool, only started with:  docker compose --profile tools up -d
+  adminer:
+    image: adminer:4
+    profiles: ["tools"]
+    ports:
+      - "8090:8080"
+    networks: [frontend, backend]
+
+volumes:
+  pgdata:
+  redisdata:
+
+networks:
+  frontend:
+  backend:
+    internal: true        # backend tier has no internet / outside access

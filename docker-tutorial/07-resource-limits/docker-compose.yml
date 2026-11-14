@@ -1,0 +1,21 @@
+# Module 07 - CPU / memory limits and JVM container awareness
+name: limits-demo
+
+services:
+  app-limited:
+    build:
+      context: ../apps/hello-app
+      dockerfile: ../../02-multistage-builds/Dockerfile.layered
+    image: hello-app:layered
+    ports: ["8081:8080"]
+    mem_limit: 256m            # hard memory limit (cgroup) -> OOM kill if exceeded
+    memswap_limit: 256m        # no swap
+    cpus: 0.5                  # half a core
+    pids_limit: 200
+    environment:
+      JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=50 -XX:+ExitOnOutOfMemoryError -Xlog:gc:stderr"
+
+  app-unlimited:
+    image: hello-app:layered
+    ports: ["8082:8080"]
+    depends_on: [app-limited]   # only to reuse the image build

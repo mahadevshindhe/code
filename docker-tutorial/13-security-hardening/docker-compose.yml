@@ -1,0 +1,25 @@
+# Module 13 - Hardened runtime settings for a Java container
+name: hardened
+
+services:
+  app:
+    image: hello-app:layered           # build in module 02
+    ports: ["127.0.0.1:8080:8080"]     # expose to localhost only, not the whole LAN
+    user: "app"                        # explicit non-root user created in the Dockerfile
+    read_only: true                    # root filesystem is read-only
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m # JVM/Tomcat needs a writable /tmp
+    cap_drop: [ALL]                    # drop ALL Linux capabilities
+    security_opt:
+      - no-new-privileges:true         # block setuid privilege escalation
+    pids_limit: 200
+    mem_limit: 384m
+    cpus: 1.0
+    environment:
+      JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=60 -XX:+ExitOnOutOfMemoryError"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/actuator/health/liveness"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+      start_period: 30s

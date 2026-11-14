@@ -1,0 +1,22 @@
+# Module 08 - Reverse proxy / load balancer with scaled replicas
+name: lb-demo
+
+services:
+  hello:
+    build:
+      context: ../apps/hello-app
+      dockerfile: ../../02-multistage-builds/Dockerfile.layered
+    image: hello-app:layered
+    deploy:
+      replicas: 3                 # 3 identical containers (no host port -> no conflicts)
+    expose: ["8080"]              # documents port; reachable only inside the network
+    environment:
+      APP_GREETING: "Served through nginx"
+
+  nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on: [hello]

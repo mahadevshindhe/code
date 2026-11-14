@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: hello-app
+    metrics_path: /actuator/prometheus
+    # DNS service discovery: one target per replica of service "hello"
+    dns_sd_configs:
+      - names: [hello]
+        type: A
+        port: 8080
