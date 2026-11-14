@@ -1,0 +1,32 @@
+# One pod PER NODE: log shippers, node agents, CNI, monitoring exporters
+apiVersion: apps/v1
+kind: DaemonSet
+metadata: { name: node-agent, namespace: demo }
+spec:
+  selector:
+    matchLabels: { app: node-agent }
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate: { maxUnavailable: 1 }
+  template:
+    metadata:
+      labels: { app: node-agent }
+    spec:
+      tolerations:                       # also run on the control-plane node
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+      containers:
+        - name: agent
+          image: busybox:1.36
+          env:
+            - name: NODE_NAME
+              valueFrom: { fieldRef: { fieldPath: spec.nodeName } }
+          command: ["sh", "-c", "while true; do echo \"agent on $NODE_NAME alive at $(date)\"; sleep 30; done"]
+          volumeMounts:
+            - { name: varlog, mountPath: /host/var/log, readOnly: true }   # typical: read node logs
+          resources:
+            requests: { cpu: 10m, memory: 16Mi }
+      volumes:
+        - name: varlog
+          hostPath: { path: /var/log }

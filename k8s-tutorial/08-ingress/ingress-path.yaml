@@ -1,0 +1,23 @@
+# Path-based routing on ONE host (fan-out).
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: path-routing
+  namespace: demo
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "30"      # controller-specific tuning via annotations
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: apps.localtest.me
+      http:
+        paths:
+          - path: /hello
+            pathType: Prefix
+            backend: { service: { name: hello, port: { number: 80 } } }
+          - path: /actuator
+            pathType: Prefix
+            backend: { service: { name: hello, port: { number: 80 } } }
+          - path: /
+            pathType: Prefix
+            backend: { service: { name: web, port: { number: 80 } } }

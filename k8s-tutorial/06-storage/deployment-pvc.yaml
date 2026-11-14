@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-pvc
+  namespace: demo
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate                   # RWO volume: old pod must release it before the new one mounts it
+  selector:
+    matchLabels: { app: hello-pvc }
+  template:
+    metadata:
+      labels: { app: hello-pvc }
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000                # volume group-ownership so the non-root app can write
+      containers:
+        - name: hello
+          image: hello-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports: [{ containerPort: 8080 }]
+          volumeMounts:
+            - { name: data, mountPath: /data }
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: 8080 }
+            initialDelaySeconds: 10
+          resources:
+            requests: { cpu: 100m, memory: 256Mi }
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: hello-data

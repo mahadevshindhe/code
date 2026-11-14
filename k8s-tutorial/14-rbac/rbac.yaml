@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Namespace
+metadata: { name: rbac-demo }
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata: { name: pod-reader, namespace: rbac-demo }
+---
+# Namespaced permissions
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata: { name: pod-reader, namespace: rbac-demo }
+rules:
+  - apiGroups: [""]                          # "" = core API group
+    resources: ["pods", "pods/log"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: { name: pod-reader-binding, namespace: rbac-demo }
+subjects:
+  - kind: ServiceAccount
+    name: pod-reader
+    namespace: rbac-demo
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+# Cluster-wide, read-only view of nodes
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: node-viewer
+  labels: { tutorial: k8s }
+rules:
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: node-viewer-binding
+  labels: { tutorial: k8s }
+subjects:
+  - kind: ServiceAccount
+    name: pod-reader
+    namespace: rbac-demo
+roleRef:
+  kind: ClusterRole
+  name: node-viewer
+  apiGroup: rbac.authorization.k8s.io
+---
+# A pod that calls the API server with its ServiceAccount token (like operators / Spring Cloud Kubernetes do)
+apiVersion: v1
+kind: Pod
+metadata: { name: api-client, namespace: rbac-demo }
+spec:
+  serviceAccountName: pod-reader
+  containers:
+    - name: curl
+      image: curlimages/curl:8.10.1
+      command: ["sleep", "3600"]
+---
+# Same pod WITHOUT permissions (default service account)
+apiVersion: v1
+kind: Pod
+metadata: { name: api-client-noperm, namespace: rbac-demo }
+spec:
+  automountServiceAccountToken: true
+  containers:
+    - name: curl
+      image: curlimages/curl:8.10.1
+      command: ["sleep", "3600"]

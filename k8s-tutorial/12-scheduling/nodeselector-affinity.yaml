@@ -1,0 +1,36 @@
+# Node labels set by kind config: worker = disktype=ssd,zone=zone-a ; worker2 = disktype=hdd,zone=zone-b
+apiVersion: v1
+kind: Pod
+metadata: { name: on-ssd, namespace: demo }
+spec:
+  nodeSelector:                       # simplest form: hard requirement
+    disktype: ssd
+  containers:
+    - { name: app, image: "nginx:1.27-alpine" }
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: affinity-pod, namespace: demo }
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:      # hard rule (expressive operators)
+        nodeSelectorTerms:
+          - matchExpressions:
+              - { key: disktype, operator: In, values: [ssd, nvme] }
+      preferredDuringSchedulingIgnoredDuringExecution:     # soft rule with weight
+        - weight: 80
+          preference:
+            matchExpressions:
+              - { key: zone, operator: In, values: [zone-a] }
+  containers:
+    - { name: app, image: "nginx:1.27-alpine" }
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: impossible, namespace: demo }
+spec:
+  nodeSelector:
+    disktype: floppy                  # no node matches -> stays Pending
+  containers:
+    - { name: app, image: "nginx:1.27-alpine" }

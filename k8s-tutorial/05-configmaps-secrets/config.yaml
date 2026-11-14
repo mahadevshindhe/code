@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-config
+  namespace: demo
+data:
+  APP_GREETING: "Hello from a ConfigMap"      # simple key -> env var
+  FEATURE_FLAG: "true"
+  app.properties: |                           # file-like key -> mounted as a file
+    greeting=Hello
+    retries=3
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: hello-secret
+  namespace: demo
+type: Opaque
+stringData:                                   # plain text here; stored base64-encoded (NOT encrypted!)
+  db_password: "S3cr3tP@ssw0rd"
+  api_token: "tok_123456"

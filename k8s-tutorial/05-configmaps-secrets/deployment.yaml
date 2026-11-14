@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: hello }
+  template:
+    metadata:
+      labels: { app: hello }
+    spec:
+      containers:
+        - name: hello
+          image: hello-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports: [{ containerPort: 8080 }]
+          # (a) ALL keys of a ConfigMap as env vars
+          envFrom:
+            - configMapRef: { name: hello-config }
+          env:
+            # (b) single key from a ConfigMap / Secret
+            - name: APP_ENV
+              valueFrom: { configMapKeyRef: { name: hello-config, key: FEATURE_FLAG } }
+            - name: API_TOKEN
+              valueFrom: { secretKeyRef: { name: hello-secret, key: api_token } }
+          volumeMounts:
+            # (c) ConfigMap as files (auto-updated by kubelet, ~1 min delay)
+            - { name: config-vol, mountPath: /etc/app-config, readOnly: true }
+            # (d) Secret as files (tmpfs, never written to node disk)
+            - { name: secret-vol, mountPath: /etc/secret, readOnly: true }
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: 8080 }
+            initialDelaySeconds: 10
+          resources:
+            requests: { cpu: 100m, memory: 256Mi }
+      volumes:
+        - name: config-vol
+          configMap:
+            name: hello-config
+            items:
+              - { key: app.properties, path: app.properties }
+        - name: secret-vol
+          secret:
+            secretName: hello-secret
+            defaultMode: 0400

@@ -1,0 +1,37 @@
+# 1) Default deny ALL ingress in the namespace (zero-trust baseline)
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: default-deny-ingress, namespace: netpol-demo }
+spec:
+  podSelector: {}                      # all pods
+  policyTypes: [Ingress]
+---
+# 2) frontend -> backend on port 80
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: allow-frontend-to-backend, namespace: netpol-demo }
+spec:
+  podSelector:
+    matchLabels: { role: backend }
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels: { role: frontend }
+      ports:
+        - { protocol: TCP, port: 80 }
+---
+# 3) backend -> db on port 80
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: allow-backend-to-db, namespace: netpol-demo }
+spec:
+  podSelector:
+    matchLabels: { role: db }
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels: { role: backend }
+      ports:
+        - { protocol: TCP, port: 80 }

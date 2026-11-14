@@ -1,0 +1,12 @@
+# Dynamic provisioning: the default StorageClass ("standard" on kind = rancher local-path) creates the PV for us.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: hello-data
+  namespace: demo
+spec:
+  accessModes: [ReadWriteOnce]       # RWO: one node at a time | ROX: read-only many | RWX: many (needs NFS/CephFS/EFS) | RWOP: one pod
+  resources:
+    requests:
+      storage: 1Gi
+  # storageClassName: standard       # omit = default class

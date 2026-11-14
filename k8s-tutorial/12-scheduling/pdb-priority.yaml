@@ -1,0 +1,31 @@
+# PodDisruptionBudget: limits VOLUNTARY disruptions (drain, upgrades, autoscaler scale-down)
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: critical, namespace: demo }
+spec:
+  replicas: 3
+  selector: { matchLabels: { app: critical } }
+  template:
+    metadata: { labels: { app: critical } }
+    spec:
+      priorityClassName: business-critical
+      containers:
+        - { name: app, image: "nginx:1.27-alpine", resources: { requests: { cpu: 50m, memory: 32Mi } } }
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: { name: critical-pdb, namespace: demo }
+spec:
+  minAvailable: 2                                  # or maxUnavailable: 1
+  selector:
+    matchLabels: { app: critical }
+---
+# Higher priority pods are scheduled first and can PREEMPT lower priority pods when the cluster is full
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: business-critical
+  labels: { tutorial: k8s }
+value: 100000
+globalDefault: false
+description: "Critical business workloads"

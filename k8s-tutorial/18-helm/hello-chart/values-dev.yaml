@@ -1,0 +1,6 @@
+replicaCount: 1
+greeting: "Hello from DEV"
+appVersion: "dev"
+ingress:
+  enabled: true
+  host: hello-dev.localtest.me

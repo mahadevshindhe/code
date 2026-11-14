@@ -1,0 +1,23 @@
+# Canary release with plain Kubernetes: the Service selects only "app: hello" (not "track"),
+# so stable (3 pods) and canary (1 pod) both receive traffic -> ~25% hits the canary.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-canary
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: hello, track: canary }
+  template:
+    metadata:
+      labels: { app: hello, track: canary }
+    spec:
+      containers:
+        - name: hello
+          image: hello-app:2.0
+          imagePullPolicy: IfNotPresent
+          env: [{ name: APP_VERSION, value: "v2-CANARY" }]
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: 8080 }
+            initialDelaySeconds: 10

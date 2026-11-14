@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-app
+  namespace: notes
+  labels: { app: notes-app }
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: notes-app } }
+  strategy:
+    rollingUpdate: { maxSurge: 1, maxUnavailable: 0 }
+  template:
+    metadata:
+      labels: { app: notes-app, tier: web }
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8080"
+    spec:
+      terminationGracePeriodSeconds: 40
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        seccompProfile: { type: RuntimeDefault }
+      initContainers:
+        - name: wait-for-postgres                     # simple dependency wait (app also retries via readiness)
+          image: busybox:1.36
+          command: ["sh", "-c", "until nc -z postgres 5432; do echo waiting for postgres; sleep 2; done"]
+      containers:
+        - name: app
+          image: notes-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports: [{ name: http, containerPort: 8080 }]
+          envFrom:
+            - configMapRef: { name: notes-config }
+          volumeMounts:
+            - { name: secrets, mountPath: /run/secrets, readOnly: true }   # file db_password -> property via configtree
+            - { name: tmp, mountPath: /tmp }
+          startupProbe:
+            httpGet: { path: /actuator/health/liveness, port: http }
+            periodSeconds: 3
+            failureThreshold: 40
+          livenessProbe:
+            httpGet: { path: /actuator/health/liveness, port: http }
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: http }
+            periodSeconds: 5
+          lifecycle:
+            preStop: { exec: { command: ["sh", "-c", "sleep 5"] } }
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: { drop: ["ALL"] }
+          resources:
+            requests: { cpu: 200m, memory: 384Mi }
+            limits:   { memory: 512Mi }
+      volumes:
+        - name: secrets
+          secret: { secretName: notes-secret, defaultMode: 0400 }
+        - name: tmp
+          emptyDir: {}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector: { matchLabels: { app: notes-app } }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: notes-app
+  namespace: notes
+  labels: { app: notes-app }
+spec:
+  selector: { app: notes-app }
+  ports: [{ name: http, port: 80, targetPort: http }]
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: { name: notes, namespace: notes }
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: notes.localtest.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: { service: { name: notes-app, port: { number: 80 } } }
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: { name: notes-app, namespace: notes }
+spec:
+  scaleTargetRef: { apiVersion: apps/v1, kind: Deployment, name: notes-app }
+  minReplicas: 2
+  maxReplicas: 4
+  metrics:
+    - type: Resource
+      resource: { name: cpu, target: { type: Utilization, averageUtilization: 70 } }
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: { name: notes-app, namespace: notes }
+spec:
+  minAvailable: 1
+  selector: { matchLabels: { app: notes-app } }

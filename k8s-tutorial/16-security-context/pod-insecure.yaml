@@ -1,0 +1,10 @@
+# Will be REJECTED by the restricted namespace
+apiVersion: v1
+kind: Pod
+metadata: { name: insecure, namespace: psa-demo }
+spec:
+  containers:
+    - name: app
+      image: nginx:1.27-alpine
+      securityContext:
+        privileged: true

@@ -1,0 +1,18 @@
+# Lightweight kube-prometheus-stack values for a laptop kind cluster
+alertmanager:
+  enabled: false
+grafana:
+  adminPassword: admin
+  defaultDashboardsEnabled: true
+prometheus:
+  prometheusSpec:
+    retention: 2d
+    # discover ServiceMonitors in ALL namespaces regardless of Helm release labels
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    resources:
+      requests: { cpu: 200m, memory: 512Mi }
+kubeEtcd: { enabled: false }
+kubeControllerManager: { enabled: false }
+kubeScheduler: { enabled: false }
+kubeProxy: { enabled: false }

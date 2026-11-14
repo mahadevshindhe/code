@@ -1,0 +1,9 @@
+# Rejected by the CRD schema: replicas > 10 and message too short
+apiVersion: tutorial.example.com/v1
+kind: HelloApp
+metadata:
+  name: bad
+  namespace: crd-demo
+spec:
+  replicas: 50
+  message: "x"

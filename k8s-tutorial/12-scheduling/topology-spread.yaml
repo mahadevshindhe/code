@@ -1,0 +1,18 @@
+# Modern, more flexible way to spread pods across zones/nodes.
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: zone-spread, namespace: demo }
+spec:
+  replicas: 4
+  selector: { matchLabels: { app: zone-spread } }
+  template:
+    metadata: { labels: { app: zone-spread } }
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 1                               # max difference in pod count between zones
+          topologyKey: zone                        # node label (zone-a / zone-b); cloud: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule         # or ScheduleAnyway
+          labelSelector:
+            matchLabels: { app: zone-spread }
+      containers:
+        - { name: app, image: "nginx:1.27-alpine", resources: { requests: { cpu: 50m, memory: 32Mi } } }

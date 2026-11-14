@@ -1,0 +1,19 @@
+# Java app with a LOW memory limit; call /alloc to trigger OOM
+apiVersion: v1
+kind: Pod
+metadata:
+  name: oom-demo
+  namespace: quota-demo
+  labels: { app: oom-demo }
+spec:
+  containers:
+    - name: hello
+      image: hello-app:1.0
+      imagePullPolicy: IfNotPresent
+      ports: [{ containerPort: 8080 }]
+      env:
+        # JVM sizes heap from the CONTAINER limit. 95% -> heap can exceed what the container can really use (non-heap memory!)
+        - { name: JAVA_TOOL_OPTIONS, value: "-XX:MaxRAMPercentage=95" }
+      resources:
+        requests: { cpu: 100m, memory: 200Mi }
+        limits:   { cpu: 500m, memory: 200Mi }

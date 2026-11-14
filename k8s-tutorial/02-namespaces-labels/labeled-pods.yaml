@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-v1
+  namespace: dev
+  labels: { app: web, version: v1, tier: frontend }
+  annotations: { owner: "team-a@example.com", docs: "https://example.com/web" }
+spec:
+  containers:
+    - { name: nginx, image: "nginx:1.27-alpine" }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-v2
+  namespace: dev
+  labels: { app: web, version: v2, tier: frontend }
+spec:
+  containers:
+    - { name: nginx, image: "nginx:1.27-alpine" }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-v1
+  namespace: dev
+  labels: { app: api, version: v1, tier: backend }
+spec:
+  containers:
+    - { name: nginx, image: "nginx:1.27-alpine" }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-v1
+  namespace: staging
+  labels: { app: web, version: v1, tier: frontend }
+spec:
+  containers:
+    - { name: nginx, image: "nginx:1.27-alpine" }

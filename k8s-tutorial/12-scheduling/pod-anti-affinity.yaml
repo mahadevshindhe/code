@@ -1,0 +1,20 @@
+# HA pattern: spread replicas of the same app across nodes.
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: spread, namespace: demo }
+spec:
+  replicas: 3
+  selector: { matchLabels: { app: spread } }
+  template:
+    metadata: { labels: { app: spread } }
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:   # use "required..." for strict (needs >= nodes than replicas)
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname           # "one per node"
+                labelSelector:
+                  matchLabels: { app: spread }
+      containers:
+        - { name: app, image: "nginx:1.27-alpine", resources: { requests: { cpu: 50m, memory: 32Mi } } }

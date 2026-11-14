@@ -1,0 +1,37 @@
+# Passes the "restricted" Pod Security Standard
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: hardened-hello, namespace: psa-demo }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: hardened-hello } }
+  template:
+    metadata: { labels: { app: hardened-hello } }
+    spec:
+      automountServiceAccountToken: false              # app doesn't call the K8s API
+      securityContext:                                 # pod-level
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        seccompProfile: { type: RuntimeDefault }
+      containers:
+        - name: hello
+          image: hello-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports: [{ containerPort: 8080 }]
+          securityContext:                             # container-level
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: { drop: ["ALL"] }
+          volumeMounts:
+            - { name: tmp, mountPath: /tmp }           # JVM/Tomcat need a writable /tmp
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: 8080 }
+            initialDelaySeconds: 10
+          resources:
+            requests: { cpu: 100m, memory: 256Mi }
+            limits:   { memory: 512Mi }
+      volumes:
+        - name: tmp
+          emptyDir: { medium: Memory, sizeLimit: 64Mi }

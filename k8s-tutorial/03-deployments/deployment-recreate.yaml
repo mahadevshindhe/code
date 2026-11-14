@@ -1,0 +1,21 @@
+# Recreate strategy: kill ALL old pods, then start new ones (downtime!). Use when versions cannot coexist.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-recreate
+  namespace: demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: hello-recreate }
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels: { app: hello-recreate }
+    spec:
+      containers:
+        - name: hello
+          image: hello-app:1.0
+          imagePullPolicy: IfNotPresent
+          env: [{ name: APP_VERSION, value: "v1" }]

@@ -1,0 +1,10 @@
+# Custom StorageClass example (same provisioner as kind's default). Shows the knobs an architect cares about.
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: fast-retain
+  labels: { tutorial: k8s }
+provisioner: rancher.io/local-path
+reclaimPolicy: Retain                        # keep data after PVC deletion (default Delete)
+volumeBindingMode: WaitForFirstConsumer      # bind when a pod is scheduled -> volume created on the right node/zone
+allowVolumeExpansion: true

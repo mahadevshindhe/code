@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata: { name: every-minute, namespace: demo }
+spec:
+  schedule: "*/1 * * * *"               # standard cron syntax (UTC unless timeZone is set)
+  # timeZone: "Asia/Kolkata"
+  concurrencyPolicy: Forbid             # Allow | Forbid | Replace
+  startingDeadlineSeconds: 60
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: report
+              image: busybox:1.36
+              command: ["sh", "-c", "echo \"report generated at $(date)\""]

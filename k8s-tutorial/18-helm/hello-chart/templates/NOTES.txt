@@ -1,0 +1,9 @@
+{{ .Chart.Name }} {{ .Chart.AppVersion }} installed as release "{{ .Release.Name }}" in namespace "{{ .Release.Namespace }}".
+
+Try it:
+  kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "hello.fullname" . }} 8080:{{ .Values.service.port }}
+  curl localhost:8080/hello
+{{- if .Values.ingress.enabled }}
+
+Ingress:  curl http://{{ .Values.ingress.host }}:8080/hello
+{{- end }}

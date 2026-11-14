@@ -1,0 +1,58 @@
+# Single-node PostgreSQL as StatefulSet with persistent storage.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pg-secret
+  namespace: demo
+stringData:
+  POSTGRES_PASSWORD: "pgpass"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: demo
+spec:
+  clusterIP: None
+  selector: { app: postgres }
+  ports: [{ port: 5432, name: pg }]
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: demo
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector:
+    matchLabels: { app: postgres }
+  template:
+    metadata:
+      labels: { app: postgres }
+    spec:
+      terminationGracePeriodSeconds: 60
+      containers:
+        - name: postgres
+          image: postgres:16-alpine
+          ports: [{ containerPort: 5432 }]
+          env:
+            - { name: POSTGRES_DB, value: demo }
+            - { name: POSTGRES_USER, value: demo }
+            - { name: PGDATA, value: /var/lib/postgresql/data/pgdata }   # subdir avoids lost+found issues
+          envFrom:
+            - secretRef: { name: pg-secret }
+          readinessProbe:
+            exec: { command: ["pg_isready", "-U", "demo", "-d", "demo"] }
+            periodSeconds: 5
+          resources:
+            requests: { cpu: 100m, memory: 256Mi }
+            limits:   { memory: 512Mi }
+          volumeMounts:
+            - { name: pgdata, mountPath: /var/lib/postgresql/data }
+  volumeClaimTemplates:
+    - metadata: { name: pgdata }
+      spec:
+        accessModes: [ReadWriteOnce]
+        resources:
+          requests: { storage: 1Gi }

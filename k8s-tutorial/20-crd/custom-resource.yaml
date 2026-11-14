@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata: { name: crd-demo }
+---
+apiVersion: tutorial.example.com/v1
+kind: HelloApp
+metadata:
+  name: greeter
+  namespace: crd-demo
+spec:
+  replicas: 2
+  message: "Hello from a custom resource"

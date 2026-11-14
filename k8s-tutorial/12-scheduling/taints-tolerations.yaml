@@ -1,0 +1,23 @@
+# First: kubectl taint nodes k8s-tutorial-worker dedicated=gpu:NoSchedule
+apiVersion: v1
+kind: Pod
+metadata: { name: tolerant, namespace: demo }
+spec:
+  tolerations:
+    - key: dedicated
+      operator: Equal
+      value: gpu
+      effect: NoSchedule                           # allows (does not force) scheduling on the tainted node
+  nodeSelector:
+    disktype: ssd                                  # toleration + selector = dedicated nodes pattern
+  containers:
+    - { name: app, image: "nginx:1.27-alpine" }
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: intolerant, namespace: demo }
+spec:
+  nodeSelector:
+    disktype: ssd                                  # wants the tainted node but has no toleration -> Pending
+  containers:
+    - { name: app, image: "nginx:1.27-alpine" }

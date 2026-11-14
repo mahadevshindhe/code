@@ -1,0 +1,23 @@
+# OPTIONAL (needs Calico, module 15). Only the app may reach postgres/redis; only ingress-nginx may reach the app.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: data-tier-from-app-only, namespace: notes }
+spec:
+  podSelector:
+    matchLabels: { tier: data }
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - podSelector: { matchLabels: { app: notes-app } }
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: app-from-ingress-only, namespace: notes }
+spec:
+  podSelector:
+    matchLabels: { app: notes-app }
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels: { kubernetes.io/metadata.name: ingress-nginx }

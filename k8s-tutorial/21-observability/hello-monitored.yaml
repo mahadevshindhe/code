@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata: { name: monitoring-demo }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: hello, namespace: monitoring-demo }
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: hello } }
+  template:
+    metadata: { labels: { app: hello } }
+    spec:
+      containers:
+        - name: hello
+          image: hello-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports: [{ name: http, containerPort: 8080 }]
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: http }
+            initialDelaySeconds: 10
+          resources:
+            requests: { cpu: 100m, memory: 256Mi }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello
+  namespace: monitoring-demo
+  labels: { app: hello }
+spec:
+  selector: { app: hello }
+  ports: [{ name: http, port: 80, targetPort: http }]     # port NAME is referenced by the ServiceMonitor
+---
+# Custom resource from the Prometheus Operator: "scrape every Service labelled app=hello at /actuator/prometheus"
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata: { name: hello, namespace: monitoring-demo }
+spec:
+  selector:
+    matchLabels: { app: hello }
+  endpoints:
+    - port: http
+      path: /actuator/prometheus
+      interval: 10s

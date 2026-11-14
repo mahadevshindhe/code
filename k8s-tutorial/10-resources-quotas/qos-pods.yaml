@@ -1,0 +1,30 @@
+# The three QoS classes (decide eviction order under node memory pressure: BestEffort -> Burstable -> Guaranteed)
+apiVersion: v1
+kind: Pod
+metadata: { name: qos-guaranteed, namespace: quota-demo }
+spec:
+  containers:
+    - name: app
+      image: nginx:1.27-alpine
+      resources:                                   # requests == limits for ALL containers -> Guaranteed
+        requests: { cpu: 100m, memory: 64Mi }
+        limits:   { cpu: 100m, memory: 64Mi }
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: qos-burstable, namespace: quota-demo }
+spec:
+  containers:
+    - name: app
+      image: nginx:1.27-alpine
+      resources:                                   # requests < limits -> Burstable
+        requests: { cpu: 50m, memory: 32Mi }
+        limits:   { cpu: 200m, memory: 128Mi }
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: qos-besteffort, namespace: quota-demo }
+spec:
+  containers:
+    - name: app
+      image: nginx:1.27-alpine                     # no resources at all -> BestEffort (LimitRange will inject defaults!)

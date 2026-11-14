@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Namespace
+metadata: { name: netpol-demo }
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: frontend, namespace: netpol-demo, labels: { role: frontend } }
+spec:
+  containers: [{ name: app, image: "nginx:1.27-alpine" }]
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: backend, namespace: netpol-demo, labels: { role: backend } }
+spec:
+  containers: [{ name: app, image: "nginx:1.27-alpine" }]
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: db, namespace: netpol-demo, labels: { role: db } }
+spec:
+  containers: [{ name: app, image: "nginx:1.27-alpine" }]
+---
+apiVersion: v1
+kind: Pod
+metadata: { name: intruder, namespace: netpol-demo, labels: { role: intruder } }
+spec:
+  containers: [{ name: app, image: "nginx:1.27-alpine" }]
+---
+apiVersion: v1
+kind: Service
+metadata: { name: backend, namespace: netpol-demo }
+spec: { selector: { role: backend }, ports: [{ port: 80 }] }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: db, namespace: netpol-demo }
+spec: { selector: { role: db }, ports: [{ port: 80 }] }

@@ -1,0 +1,21 @@
+# Host-based routing. *.localtest.me always resolves to 127.0.0.1 (public DNS), so no /etc/hosts edits needed.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: host-routing
+  namespace: demo
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: hello.localtest.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: { service: { name: hello, port: { number: 80 } } }
+    - host: web.localtest.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: { service: { name: web, port: { number: 80 } } }
